@@ -1,5 +1,7 @@
-const Oppinions = () => {
+import classes from "../styles/opinions.module.css"
+
+const Opinions = () => {
     return (<>Opinions</>);
 }
 
-export default Oppinions;
+export default Opinions;
