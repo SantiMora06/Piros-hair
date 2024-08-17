@@ -1,5 +1,11 @@
+import Header from "../components/Header";
+import Offers from "../components/Offers";
+
 const Home = () => {
-    return (<>HOMEPAGE</>);
+    return (<>
+        <Header />
+        <Offers />
+    </>);
 }
 
 export default Home;
