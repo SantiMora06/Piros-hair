@@ -1,5 +1,5 @@
 .header {
-    background-image: url("../assets/img.webp");
+    background-image: url("../assets/Playa.jpeg");
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -21,14 +21,13 @@
 .postHeader {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-end;
     padding: 2em 0;
+    font-weight: bold;
 }
 
-span {
-    content: "";
-}
 
 .list {
     display: flex;
@@ -36,4 +35,10 @@ span {
     height: 100vh;
     align-items: center;
     justify-content: center;
+}
+
+.listheader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }

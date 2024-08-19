@@ -3,13 +3,11 @@ import classes from "../styles/header.module.css"
 
 const Header = () => {
     return (<>
-        <section className={classes.header}>
-            <ul className={classes.list}>
-                <li className={classes.listItems}> <Link to="/planify">Planifica aquí </Link></li>
-
-            </ul> </section>
-        <ul>
-            <li className={classes.postHeader}><Link to="/budget"> Budget </Link><span />   <Link to="/flightshotel">Flights & Hotel</Link><span /> <Link to="/cruises">Cruises </Link></li>
+        <ul className={classes.listheader}>
+            <li className={classes.postHeader}><Link to="/"> Home </Link> </li>
+            <li className={classes.postHeader}><Link to="/budget"> Budget </Link> </li>
+            <li className={classes.postHeader}><Link to="/flightshotel">Flights & Hotel</Link></li>
+            <li className={classes.postHeader}><Link to="/cruises">Cruises </Link></li>
         </ul>
     </>);
 }

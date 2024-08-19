@@ -5,9 +5,11 @@ import ContactUsPage from "./pages/ContactUsPage"
 import CruisesPage from "./pages/CruisesPage"
 import BudgetPage from "./pages/BudgetPage"
 import FlightsPage from "./pages/FlightsHotel"
+import Header from "./components/Header"
 
 function App() {
   return <>
+    <Header />
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/planify" element={<Planify />} />

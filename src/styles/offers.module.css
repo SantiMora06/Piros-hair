@@ -2,9 +2,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-top: 4%;
 }
 
 .offer {
+    box-shadow: 0 0 10px;
     display: flex;
     width: 30%;
     flex-direction: column;

@@ -1,0 +1,37 @@
+.container {
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.destinosItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2em;
+}
+
+.tirana,
+.dubrovnik {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+.p {
+    display: flex;
+    width: 50%;
+    padding-top: 2em;
+}
+
+.h1 {
+    font-size: 2em;
+}
+
+.h2 {
+    padding-bottom: 2em;
+}

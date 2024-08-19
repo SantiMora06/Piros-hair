@@ -1,10 +1,12 @@
-import Header from "../components/Header";
+import Destinos from "../components/Destinos";
 import Offers from "../components/Offers";
+import PreHeader from "../components/preHeader";
 
 const Home = () => {
     return (<>
-        <Header />
+        <PreHeader />
         <Offers />
+        <Destinos />
     </>);
 }
 
