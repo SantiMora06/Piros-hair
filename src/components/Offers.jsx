@@ -2,8 +2,6 @@ import classes from "../styles/offers.module.css"
 import londoneye from "../assets/londoneye.jpeg"
 import alexanderplatz from "../assets/alexanderplatz.jpeg"
 import paris from "../assets/paris.jpeg"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEarthEurope } from '@fortawesome/free-solid-svg-icons';
 
 const Offers = () => {
     return (<>
@@ -34,8 +32,7 @@ const Offers = () => {
         </section>
         <div className={classes.buttondiv}>
             <button type="button" className={classes.boton}>Ver más
-                <FontAwesomeIcon icon={faEarthEurope} className={classes.icono}
-                /></button>
+            </button>
         </div>
     </>);
 }
