@@ -1,40 +1,39 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-const IndividualTravel = () => {
+const IndividualTravelById = () => {
 
-    const [place, setPlace] = useState("")
+    const [plan, setPlan] = useState(null)
+    const { planId } = useParams();
 
-
-    const getPlace = async () => {
+    const getPlan = async () => {
         try {
-            const response = await fetch(`localhost:5005/places/${place._id}`)
+            const response = await fetch(`http://localhost:5005/plan/${plan._id}`)
             if (response.ok) {
-                const data = response.json();
-                setPlace(data)
+                const data = await response.json();
+                setPlan(data)
             }
 
         } catch (error) {
             console.log("Error: ", error)
         }
-
     }
 
     useEffect(() => {
-        getPlace();
-    }, [])
-
+        getPlan();
+    }, [planId])
 
     return (<>
         <div>
             <h1>Current Destination</h1>
-            {place ? <div><p>{place.name}</p>
-                <img src={place.img} />
-                <p> {place.description}</p>
-                <p>Price: {place.price}</p>
-                <p>Days: {place.price}</p></div>
+            {plan ? <div><p>{plan.name}</p>
+                <img src={plan.img} />
+                <p> {plan.description}</p>
+                <p>Price: {plan.price}</p>
+                <p>Days: {plan.days}</p></div>
                 : <p>Loading...</p>}
         </div>
     </>);
 }
 
-export default IndividualTravel;
+export default IndividualTravelById;
