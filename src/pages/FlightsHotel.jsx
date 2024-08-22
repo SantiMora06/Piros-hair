@@ -1,5 +1,5 @@
 const ProducstPage = () => {
-    return (<>Producs Page</>);
+    return (<>Flights + Hotels</>);
 }
 
 export default ProducstPage;

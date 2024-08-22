@@ -1,5 +1,5 @@
 const OpinionsPage = () => {
-    return (<>Opinions Page</>);
+    return (<>Cruises</>);
 }
 
 export default OpinionsPage;

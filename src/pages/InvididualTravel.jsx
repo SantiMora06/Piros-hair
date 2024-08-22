@@ -8,7 +8,7 @@ const IndividualTravelById = () => {
 
     const getPlan = async () => {
         try {
-            const response = await fetch(`http://localhost:5005/plan/${plan._id}`)
+            const response = await fetch(`http://localhost:5005/api/plan/${plan._id}`)
             if (response.ok) {
                 const data = await response.json();
                 setPlan(data)

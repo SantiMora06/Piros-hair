@@ -1,14 +1,9 @@
-import Destinos from "../components/Destinos";
-import Offers from "../components/Offers";
-import PreHeader from "../components/preHeader";
-import SearchBar from "../components/SearchBar";
-
+import Plans from "../components/Plans";
+import PreHeader from "../components/preHeader"
 const Home = () => {
     return (<>
         <PreHeader />
-        <SearchBar />
-        <Offers />
-        <Destinos />
+        <Plans />
     </>);
 }
 

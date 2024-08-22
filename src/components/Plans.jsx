@@ -8,7 +8,7 @@ const Plans = () => {
     useEffect(() => {
         const fetchPlans = async () => {
             try {
-                const response = await fetch('http://localhost:5005/plan'); // Replace with your API endpoint
+                const response = await fetch('http://localhost:5005/api/plan'); // Replace with your API endpoint
                 const data = await response.json();
                 setPlans(data);
                 setLoading(false);
@@ -25,7 +25,6 @@ const Plans = () => {
 
     return (
         <div>
-            <h1>Travel Plans</h1>
             <PlansList plans={plans} />
         </div>
     );
