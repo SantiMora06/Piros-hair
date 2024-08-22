@@ -6,6 +6,7 @@ const PlansList = ({ plans }) => {
     const [filteredPlans, setFilteredPlans] = useState(plans);
     const [visibleCount, setVisibleCount] = useState(6);
 
+
     const handleSearch = (searchTerm, filterCriteria) => {
         const lowercasedTerm = searchTerm.toLowerCase();
         const filtered = plans.filter(plan => {
@@ -22,7 +23,7 @@ const PlansList = ({ plans }) => {
         setVisibleCount(6)
     };
 
-    const showMore = () => {
+    const showMorePlans = () => {
         setVisibleCount(prevCount => prevCount + 6);
     }
 
@@ -36,7 +37,12 @@ const PlansList = ({ plans }) => {
                 {filteredPlans.map(plan => (
                     <div key={plan._id} className={classes.filterPlans}>
                         <p>{plan.name}</p>
-                        <img src={plan.image} alt={plan.name} />
+                        <div className={classes.imageContainer}>
+                            <img src={plan.image} alt={plan.name} />
+                            <div className={classes.descriptionOverlay}>
+                                <p>{plan.description}</p>
+                            </div>
+                        </div>
                         <p>Price: {plan.price}€</p>
                         <p>Days: {plan.days}</p>
                     </div>

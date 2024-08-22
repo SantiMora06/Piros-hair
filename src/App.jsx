@@ -3,7 +3,6 @@ import Home from "./pages/HomePage"
 import Planify from "./pages/Planify"
 import ContactUsPage from "./pages/ContactUsPage"
 import CruisesPage from "./pages/CruisesPage"
-import BudgetPage from "./pages/BudgetPage"
 import FlightsPage from "./pages/FlightsHotel"
 import Header from "./components/Header"
 
@@ -15,7 +14,6 @@ function App() {
       <Route path="/planify" element={<Planify />} />
       <Route path="/contact" element={<ContactUsPage />} />
       <Route path="/cruises" element={<CruisesPage />} />
-      <Route path="/budget" element={< BudgetPage />} />
       <Route path="/flightshotel" element={< FlightsPage />} />
     </Routes></>
 }
