@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import classes from "../styles/searchbar.module.css"
 
 const SearchBar = ({ onSearch }) => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -17,7 +18,7 @@ const SearchBar = ({ onSearch }) => {
     };
 
     return (
-        <div>
+        <div className={classes.searchDiv}>
             <select onChange={handleCriteriaChange} value={filterCriteria}>
                 <option value="name">Name</option>
                 <option value="price">Price</option>

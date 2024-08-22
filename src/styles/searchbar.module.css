@@ -1,0 +1,12 @@
+.searchDiv {
+    display: flex;
+    padding-top: 2em;
+    justify-content: center;
+}
+
+.searchDiv input,
+.searchDiv select {
+    margin: 0 1em;
+    padding: 1em;
+    border-radius: 10px;
+}
