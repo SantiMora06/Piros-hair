@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import PlansList from './PlansList'; // Adjust the path as needed
+import PlansList from './FilterPlans'; // Adjust the path as needed
 
 const Plans = () => {
     const [plans, setPlans] = useState([]);
