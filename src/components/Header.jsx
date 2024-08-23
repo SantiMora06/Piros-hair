@@ -10,8 +10,7 @@ const Header = () => {
             <li className={classes.postHeader}><Link to="/flightshotel">Flights & Hotel</Link></li>
             <li className={classes.postHeader}><Link to="/cruises">Cruises </Link></li>
         </ul>
-        <section className={classes.header}>
-        </section>
+
     </>);
 }
 
