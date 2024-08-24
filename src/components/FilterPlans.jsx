@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SearchBar from './SearchBar'; // Adjust the path as needed
 import classes from "../styles/filterplans.module.css"
+import { Link } from 'react-router-dom';
 
 const PlansList = ({ plans }) => {
     const [filteredPlans, setFilteredPlans] = useState(plans);
@@ -34,8 +35,8 @@ const PlansList = ({ plans }) => {
 
             <div className={classes.container}>
 
-                {filteredPlans.map(plan => (
-                    <div key={plan._id} className={classes.filterPlans}>
+                {filteredPlans.slice(0, visibleCount).map(plan => (
+                    <Link to={`/plan/${plan._id}`} key={plan._id} className={classes.filterPlans}>
                         <p>{plan.name}</p>
                         <div className={classes.imageContainer}>
                             <img src={plan.image} alt={plan.name} />
@@ -45,7 +46,7 @@ const PlansList = ({ plans }) => {
                         </div>
                         <p>Price: {plan.price}€</p>
                         <p>Days: {plan.days}</p>
-                    </div>
+                    </Link>
                 ))}
             </div>
             {visibleCount < filteredPlans.length && (

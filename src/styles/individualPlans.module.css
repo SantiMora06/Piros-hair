@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2%;
+}
+
+.innerContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2%;
+}
+
+.innerContainer img {
+    display: flex;
+    max-width: 50vw;
+}
+
+.description {
+    display: flex;
+    font-style: normal;
+    padding: 0.5em 0;
+    text-justify: auto;
+    max-width: 50vw
+}
+
+.div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 50vw;
+    background-color: rgba(5, 255, 255, 0.154);
+}
+
+.name,
+.price,
+.days {
+    padding-bottom: 1%;
+    display: flex;
+    align-items: center;
+}
+
+
+button.btn {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    width: 10vw;
+    align-items: center;
+    margin: 1em 0;
+    cursor: pointer;
+}
