@@ -6,6 +6,8 @@ import CruisesPage from "./pages/CruisesPage"
 import Header from "./components/Header"
 import IndividualTravelById from "./pages/InvididualTravel"
 import Plans from "./pages/PlansPage"
+import IndividualCruise from "./pages/IndividualCruise"
+import IndividualIsland from "./pages/IndividualIsland"
 
 function App() {
   return <>
@@ -15,7 +17,9 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/contact" element={<ContactUsPage />} />
       <Route path="/cruises" element={<CruisesPage />} />
+      <Route path="/cruise/:cruiseId" element={<IndividualCruise />} />
       <Route path="/islands" element={<IslandsPage />} />
+      <Route path="/island/:islandId" element={<IndividualIsland />} />
       <Route path="/plan" element={<Plans />} />
     </Routes></>
 }

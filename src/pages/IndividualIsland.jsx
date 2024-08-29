@@ -29,12 +29,12 @@ const IndividualIsland = () => {
         <div className={classes.container}>
             <h1 className={classes.h1}>Current Destination</h1>
             {island ? <div className={classes.innerContainer}>
-                <p className={classes.name}>{plan.name}</p>
-                <img src={plan.image} />
-                <p className={classes.description}> {plan.description}</p>
+                <p className={classes.name}>{island.name}</p>
+                <img src={island.image} />
+                <p className={classes.description}> {island.description}</p>
                 <section className={classes.div}>
-                    <p className={classes.price}>Price: {plan.price} </p>
-                    <p className={classes.days}>Days: {plan.days}</p>
+                    <p className={classes.price}>Price: {island.price} </p>
+                    <p className={classes.days}>Days: {island.days}</p>
                 </section>
                 <button className={classes.btn} type="button">More info</button>
             </div>

@@ -1,0 +1,37 @@
+.filterPlans {
+    box-shadow: 0 0 10px;
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    padding: 1em 0;
+    align-content: center;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
+    font-size: 2em;
+}
+
+.filterPlans p {
+    display: flex;
+    justify-content: center;
+}
+
+.img {
+    padding: 1em 0;
+    display: flex;
+    width: 25vw;
+    height: 32vh;
+}

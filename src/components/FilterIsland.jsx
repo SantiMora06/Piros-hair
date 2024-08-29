@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SearchBar from './SearchBar'; // Adjust the path as needed
-import classes from "../styles/filterplans.module.css"
+import classes from "../styles/filterisland.module.css"
 import { Link } from 'react-router-dom';
 
 const IslandsList = ({ islands }) => {
@@ -29,7 +29,7 @@ const IslandsList = ({ islands }) => {
 
     return (
         <div>
-            <h1>Travel Plans</h1>
+            <h1>Islands</h1>
             <SearchBar onSearch={handleSearch} />
 
             <div className={classes.container}>
@@ -38,10 +38,7 @@ const IslandsList = ({ islands }) => {
                     <Link to={`/island/${island._id}`} key={island._id} className={classes.filterPlans}>
                         <p>{island.name}</p>
                         <div className={classes.imageContainer}>
-                            <img src={island.image} alt={island.name} />
-                            <div className={classes.descriptionOverlay}>
-                                <p>{island.description}</p>
-                            </div>
+                            <img src={island.image} alt={island.name} className={classes.img} />
                         </div>
                         <p>Price: {island.price}€</p>
                         <p>Days: {island.days}</p>
