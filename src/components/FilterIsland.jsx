@@ -28,7 +28,7 @@ const IslandsList = ({ islands }) => {
 
 
     return (
-        <div>
+        <div className={classes.bigContainer}>
             <h1>Islands</h1>
             <SearchBar onSearch={handleSearch} />
 

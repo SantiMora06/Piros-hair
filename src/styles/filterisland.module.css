@@ -1,3 +1,7 @@
+.bigContainer {
+    margin: -4em 0 4em 0;
+}
+
 .filterPlans {
     box-shadow: 0 0 10px;
     display: flex;
@@ -20,8 +24,8 @@
 h1 {
     display: flex;
     justify-content: center;
-    padding-top: 1em;
     font-size: 2em;
+    padding-top: -1em;
 }
 
 .filterPlans p {

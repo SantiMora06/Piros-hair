@@ -26,7 +26,8 @@ const PlansList = ({ plans = [] }) => {
     };
 
     return (
-        <div>
+        <div className={classes.bigContainer}>
+            <h1>Flight & Hotels</h1>
             <SearchBar onSearch={handleSearch} />
 
             <div className={classes.container}>

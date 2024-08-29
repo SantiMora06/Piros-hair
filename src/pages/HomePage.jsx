@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PlansList from '../components/FilterPlans'; // Importing the PlansList component
 import PostHeader from '../components/PostHeader';
 import Banner1 from '../components/Banner1';
+import Banner2 from '../components/Banner2';
 import IslandsList from '../components/FilterIsland';
 import CruisesList from '../components/FilterCruises';
 
@@ -67,7 +68,7 @@ const Home = () => {
             <PlansList plans={plans} />
             <Banner1 />
             <CruisesList cruises={cruises} />
-            <Banner1 />
+            <Banner2 />
             <IslandsList islands={islands} />
             <Banner1 />
         </>

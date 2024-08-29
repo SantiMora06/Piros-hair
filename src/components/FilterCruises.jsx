@@ -28,7 +28,7 @@ const CruisesList = ({ cruises }) => {
 
 
     return (
-        <div>
+        <div className={classes.bigContainer}>
             <h1>Cruises</h1>
             <SearchBar onSearch={handleSearch} />
 
