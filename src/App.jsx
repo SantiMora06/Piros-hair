@@ -3,9 +3,9 @@ import Home from "./pages/HomePage"
 import IslandsPage from "./pages/IslandsPage"
 import ContactUsPage from "./pages/ContactUsPage"
 import CruisesPage from "./pages/CruisesPage"
-import FlightsPage from "./pages/FlightsHotel"
 import Header from "./components/Header"
 import IndividualTravelById from "./pages/InvididualTravel"
+import Plans from "./pages/PlansPage"
 
 function App() {
   return <>
@@ -15,8 +15,8 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/contact" element={<ContactUsPage />} />
       <Route path="/cruises" element={<CruisesPage />} />
-      <Route path="/flightshotel" element={< FlightsPage />} />
       <Route path="/islands" element={<IslandsPage />} />
+      <Route path="/plan" element={<Plans />} />
     </Routes></>
 }
 

@@ -1,0 +1,40 @@
+.Banner1 {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.Banner1 img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 60vh;
+}
+
+.Title {
+    position: relative;
+    bottom: 35vh;
+    background-color: rgba(255, 255, 255, 0.299);
+    backdrop-filter: blur(3px);
+    padding: 0;
+    margin: 0 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.paragraph {
+    position: relative;
+    bottom: 10.3vh;
+    left: 35vw;
+    background-color: rgba(255, 255, 255, 0.299);
+    backdrop-filter: blur(10px);
+    padding: 0;
+    margin: 0 35%;
+    display: flex;
+    justify-content: center;
+}
+
+.Banner2 {}
+
+.Banner3 {}

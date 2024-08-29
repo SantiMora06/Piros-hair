@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SearchBar from './SearchBar'; // Adjust the path as needed
 import classes from "../styles/filterplans.module.css"
 import { Link } from 'react-router-dom';
 
 const CruisesList = ({ cruises }) => {
     const [filteredCruises, setFilteredCruises] = useState(cruises);
-    const [visibleCount, setVisibleCount] = useState(6);
 
+    useEffect(() => {
+        setFilteredCruises(cruises); // Reset filtered plans whenever the original plans data changes
+    }, [cruises]);
 
     const handleSearch = (searchTerm, filterCriteria) => {
         const lowercasedTerm = searchTerm.toLowerCase();
@@ -21,12 +23,9 @@ const CruisesList = ({ cruises }) => {
             return true;
         });
         setFilteredCruises(filtered);
-        setVisibleCount(6)
     };
 
-    const showMore = () => {
-        setVisibleCount(prevCount => prevCount + 6);
-    }
+
 
     return (
         <div>
@@ -35,13 +34,15 @@ const CruisesList = ({ cruises }) => {
 
             <div className={classes.container}>
 
-                {filteredCruises.slice(0, visibleCount).map(cruise => (
-                    <Link to={`/cruise/${cruise._id}`} key={cruise._id} className={classes.filterPlans}>
-                        <p>{cruise.name}</p>
-                        <div className={classes.imageContainer}>
-                            <img src={cruise.image} alt={cruise.name} />
-                            <div className={classes.descriptionOverlay}>
-                                <p>{cruise.description}</p>
+                {filteredCruises.map(cruise => (
+                    <Link to={`/cruise/${cruise._id}`} >
+                        <div key={cruise._id} className={classes.filterPlans}>
+                            <p>{cruise.name}</p>
+                            <div className={classes.imageContainer}>
+                                <img src={cruise.image} alt={cruise.name} />
+                                <div className={classes.descriptionOverlay}>
+                                    <p>{cruise.description}</p>
+                                </div>
                             </div>
                         </div>
                         <p>Price: {cruise.price}€</p>
@@ -49,9 +50,6 @@ const CruisesList = ({ cruises }) => {
                     </Link>
                 ))}
             </div>
-            {visibleCount < filteredCruises.length && (
-                <button onClick={showMore}>Show More</button>
-            )}
         </div>
     );
 };

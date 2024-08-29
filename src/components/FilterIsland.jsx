@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SearchBar from './SearchBar'; // Adjust the path as needed
 import classes from "../styles/filterplans.module.css"
 import { Link } from 'react-router-dom';
 
 const IslandsList = ({ islands }) => {
     const [filteredIsland, setFilteredIsland] = useState(islands);
-    const [visibleCount, setVisibleCount] = useState(6);
 
+    useEffect(() => {
+        setFilteredIsland(islands); // Reset filtered plans whenever the original plans data changes
+    }, [islands]);
 
     const handleSearch = (searchTerm, filterCriteria) => {
         const lowercasedTerm = searchTerm.toLowerCase();
@@ -21,12 +23,9 @@ const IslandsList = ({ islands }) => {
             return true;
         });
         setFilteredIsland(filtered);
-        setVisibleCount(6)
     };
 
-    const showMore = () => {
-        setVisibleCount(prevCount => prevCount + 6);
-    }
+
 
     return (
         <div>
@@ -35,7 +34,7 @@ const IslandsList = ({ islands }) => {
 
             <div className={classes.container}>
 
-                {filteredIsland.slice(0, visibleCount).map(island => (
+                {filteredIsland.map(island => (
                     <Link to={`/island/${island._id}`} key={island._id} className={classes.filterPlans}>
                         <p>{island.name}</p>
                         <div className={classes.imageContainer}>
@@ -49,9 +48,7 @@ const IslandsList = ({ islands }) => {
                     </Link>
                 ))}
             </div>
-            {visibleCount < filteredIsland.length && (
-                <button onClick={showMore}>Show More</button>
-            )}
+
         </div>
     );
 };

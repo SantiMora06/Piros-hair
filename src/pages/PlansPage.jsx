@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import PlansList from './FilterPlans'; // Adjust the path as needed
+import classes from "../styles/plans.module.css"
+import { Link } from 'react-router-dom';
 
 const Plans = () => {
     const [plans, setPlans] = useState([]);
@@ -25,7 +26,16 @@ const Plans = () => {
 
     return (
         <div>
-            <PlansList plans={plans} />
+            {plans.map(plan => (
+                <div key={plan._id} className={classes.container}>
+                    <Link to={`/plan/${plan._id}`} >
+                        <h1>{plan.name}</h1>
+                        <img src={plan.image} />
+                        <p className={classes.description}>{plan.description}</p>
+                        <p className={classes.pricedays}> {plan.price} € - {plan.days}</p>
+                    </Link>
+                </div>
+            ))}
         </div>
     );
 };
