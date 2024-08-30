@@ -1,60 +1,52 @@
-.header {
-    background-image: url("../assets/logo2.png");
-    background-size: contain;
-    height: 100vh;
+.listheader {
+    list-style: none;
     display: flex;
-
-}
-
-.listItems {
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(4px);
     font-size: 2em;
-    font-weight: bold;
     text-transform: uppercase;
+    align-content: center;
 }
 
 .postHeader {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-end;
-    font-weight: bold;
+    margin: 0 10px;
 }
 
-.postHeader1 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    font-weight: bold;
+.dropdownButton {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
 }
 
-
-.list {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
+.dropdownButton:hover {
+    background-color: #0056b3;
 }
 
-.listheader {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    position: fixed;
-    z-index: 4;
-    width: 100%;
-    background-color: rgba(5, 255, 255, 0.906);
-    align-items: center;
+/* Dropdown menu styles */
+.dropdownMenu {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    /* Adjust according to your header's height */
+    right: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 300px;
+    /* Adjust width as needed */
 }
 
-.logo img {
-    width: 50px;
+ul img {
+    width: 70px;
 }

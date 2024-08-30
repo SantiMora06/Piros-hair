@@ -72,7 +72,6 @@ const Home = () => {
             <Banner2 />
             <IslandsList islands={islands} />
             <Banner1 />
-            <DynamicFormWithHookForm />
         </>
     );
 }

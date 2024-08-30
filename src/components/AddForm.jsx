@@ -6,6 +6,8 @@ const DynamicFormWithHookForm = () => {
     const { control, handleSubmit, reset } = useForm();
     const [selectedOption, setSelectedOption] = useState("");
     const [formFields, setFormFields] = useState([]);
+    const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+
 
     const options = [
         {
@@ -117,8 +119,16 @@ const DynamicFormWithHookForm = () => {
         }
     };
 
+    const toggleDropdown = () => {
+        setIsDropdownVisible(!isDropdownVisible);
+    };
+
     return (
+
         <div className={classes.form}>
+            <button onClick={toggleDropdown}>
+                {isDropdownVisible}
+            </button>
             <h2 className={classes.h2}>Add a route</h2>
 
             {/* Multi-select Dropdown */}
