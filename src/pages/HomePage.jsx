@@ -5,6 +5,7 @@ import Banner1 from '../components/Banner1';
 import Banner2 from '../components/Banner2';
 import IslandsList from '../components/FilterIsland';
 import CruisesList from '../components/FilterCruises';
+import DynamicFormWithHookForm from '../components/AddForm'
 
 const Home = () => {
     const [plans, setPlans] = useState([]);
@@ -71,6 +72,7 @@ const Home = () => {
             <Banner2 />
             <IslandsList islands={islands} />
             <Banner1 />
+            <DynamicFormWithHookForm />
         </>
     );
 }
