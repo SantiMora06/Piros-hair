@@ -2,35 +2,28 @@ import React, { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 
 const DropdownForm = () => {
-    // State to manage the visibility of the dropdown form
     const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
-    // React Hook Form setup
     const { control, handleSubmit } = useForm();
 
-    // Handle form submission
     const onSubmit = (data) => {
         console.log("Form Data Submitted: ", data);
-        // Logic to handle form data submission
     };
 
-    // Toggle dropdown visibility
     const toggleDropdown = () => {
         setIsDropdownVisible(!isDropdownVisible);
     };
 
     return (
         <div>
-            {/* Button to toggle dropdown form */}
             <button onClick={toggleDropdown}>
                 {isDropdownVisible}
             </button>
 
-            {/* Conditionally render dropdown form */}
             {isDropdownVisible && (
                 <div className="dropdown-menu">
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        {/* Example field: Destination Name */}
+
                         <div>
                             <label>Destination Name</label>
                             <Controller
@@ -41,7 +34,7 @@ const DropdownForm = () => {
                             />
                         </div>
 
-                        {/* Example field: Duration */}
+
                         <div>
                             <label>Duration (Days)</label>
                             <Controller
@@ -52,7 +45,7 @@ const DropdownForm = () => {
                             />
                         </div>
 
-                        {/* Example field: Description */}
+
                         <div>
                             <label>Description</label>
                             <Controller

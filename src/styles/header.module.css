@@ -12,6 +12,13 @@
     font-size: 2em;
     text-transform: uppercase;
     align-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.header img {
+    width: 100%;
 }
 
 .postHeader {

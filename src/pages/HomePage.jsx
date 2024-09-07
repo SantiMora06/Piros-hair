@@ -6,6 +6,7 @@ import Banner2 from '../components/Banner2';
 import IslandsList from '../components/FilterIsland';
 import CruisesList from '../components/FilterCruises';
 import DynamicFormWithHookForm from '../components/AddForm'
+import WhyUs from '../components/WhyUs';
 
 const Home = () => {
     const [plans, setPlans] = useState([]);
@@ -67,11 +68,11 @@ const Home = () => {
         <>
             <PostHeader />
             <PlansList plans={plans} />
-            <Banner1 />
+
             <CruisesList cruises={cruises} />
-            <Banner2 />
+
             <IslandsList islands={islands} />
-            <Banner1 />
+            <WhyUs />
         </>
     );
 }

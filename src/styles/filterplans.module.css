@@ -17,11 +17,16 @@
     padding-bottom: 3em;
 }
 
+.bigContainer {
+    margin-bottom: 2em;
+}
+
 h1 {
     display: flex;
     justify-content: center;
     font-size: 2em;
     padding-top: 1em;
+    font-weight: lighter;
 }
 
 .filterPlans p {
@@ -34,4 +39,15 @@ h1 {
     display: flex;
     width: 25vw;
     height: 32vh;
+}
+
+.seeMoreContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.seeMoreButton {
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    background-color: white;
 }

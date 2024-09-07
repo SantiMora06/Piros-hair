@@ -29,7 +29,7 @@ const Plans = () => {
             {plans.map(plan => (
                 <div key={plan._id} className={classes.container}>
                     <Link to={`/plan/${plan._id}`} >
-                        <h1>{plan.name}</h1>
+                        <h1 className={classes.h1}>Flights to {plan.name}</h1>
                         <img src={plan.image} />
                         <p className={classes.description}>{plan.description}</p>
                         <p className={classes.pricedays}> {plan.price} € - {plan.days}</p>

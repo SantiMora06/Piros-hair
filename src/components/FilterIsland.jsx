@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import SearchBar from './SearchBar'; // Adjust the path as needed
-import classes from "../styles/filterisland.module.css"
-import { Link } from 'react-router-dom';
+import classes from "../styles/filterisland.module.css";
+import { Link, useNavigate } from 'react-router-dom';
 
 const IslandsList = ({ islands }) => {
     const [filteredIsland, setFilteredIsland] = useState(islands);
+    const [visibleIslands, setVisibleIslands] = useState([]);
+    const navigate = useNavigate(); // Hook to programmatically navigate
 
     useEffect(() => {
-        setFilteredIsland(islands); // Reset filtered plans whenever the original plans data changes
+        setFilteredIsland(islands); // Reset filtered islands whenever the original islands data changes
     }, [islands]);
+
+    useEffect(() => {
+        setVisibleIslands(filteredIsland.slice(0, 3)); // Display only the first 3 islands initially
+    }, [filteredIsland]);
 
     const handleSearch = (searchTerm, filterCriteria) => {
         const lowercasedTerm = searchTerm.toLowerCase();
@@ -25,16 +31,17 @@ const IslandsList = ({ islands }) => {
         setFilteredIsland(filtered);
     };
 
-
+    const handleSeeMore = () => {
+        navigate('/island'); // Redirect to the /island route
+    };
 
     return (
         <div className={classes.bigContainer}>
-            <h1>Islands</h1>
+            <h1>Islands <em>- from 1000€</em></h1>
             <SearchBar onSearch={handleSearch} />
 
             <div className={classes.container}>
-
-                {filteredIsland.map(island => (
+                {visibleIslands.map(island => (
                     <Link to={`/island/${island._id}`} key={island._id} className={classes.filterPlans}>
                         <p>{island.name}</p>
                         <div className={classes.imageContainer}>
@@ -46,6 +53,14 @@ const IslandsList = ({ islands }) => {
                 ))}
             </div>
 
+            {/* Display 'See More' button if there are more than 3 islands */}
+            {filteredIsland.length > 3 && (
+                <div className={classes.seeMoreContainer}>
+                    <button onClick={handleSeeMore} className={classes.seeMoreButton}>
+                        See more
+                    </button>
+                </div>
+            )}
         </div>
     );
 };
