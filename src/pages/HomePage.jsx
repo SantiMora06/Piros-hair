@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import PlansList from '../components/FilterPlans'; // Importing the PlansList component
 import PostHeader from '../components/PostHeader';
-import Banner1 from '../components/Banner1';
-import Banner2 from '../components/Banner2';
 import IslandsList from '../components/FilterIsland';
 import CruisesList from '../components/FilterCruises';
-import DynamicFormWithHookForm from '../components/AddForm'
 import WhyUs from '../components/WhyUs';
 
 const Home = () => {
