@@ -14,6 +14,7 @@
     justify-content: center;
     flex-direction: column;
     background-color: rgba(4, 179, 179, 0.165);
+    width: 50vw;
 }
 
 .h1 {
