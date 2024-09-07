@@ -8,6 +8,7 @@ import IndividualTravelById from "./pages/InvididualTravel"
 import Plans from "./pages/PlansPage"
 import IndividualCruise from "./pages/IndividualCruise"
 import IndividualIsland from "./pages/IndividualIsland"
+import Footer from "./components/Footer"
 
 function App() {
   return <>
@@ -21,7 +22,9 @@ function App() {
       <Route path="/islands" element={<IslandsPage />} />
       <Route path="/island/:islandId" element={<IndividualIsland />} />
       <Route path="/plan" element={<Plans />} />
-    </Routes></>
+    </Routes>
+    <Footer />
+  </>
 }
 
 export default App

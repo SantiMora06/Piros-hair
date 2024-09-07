@@ -1,0 +1,43 @@
+.List {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 3%;
+    list-style: none;
+    margin-top: 2em;
+    flex-direction: column;
+}
+
+.listitem {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5em;
+}
+
+.listitem1,
+.listitem2,
+.listitem3,
+.listitem4 {
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.bigContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.paragraph {
+    display: flex;
+    padding: 1em 0;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.button {
+    padding: 0.5em;
+    background-color: rgba(4, 179, 179, 0.165);
+}
